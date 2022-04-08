@@ -6,8 +6,9 @@ var logger = require("morgan");
 // var passport = require("passport");
 // var session = require("express-session");
 
-var indexRouter = require("./routes/index");
-var usersRouter = require("./routes/users");
+// var indexRouter = require("./routes/index");
+const authRouter = require('./routes/auth')
+//var usersRouter = require("./routes/users");
 const blogsRouter = require("./routes/blogs");
 
 var app = express();
@@ -31,8 +32,8 @@ app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions
 */
 
-app.use("/", indexRouter);
-app.use("/users", usersRouter);
+app.use("/", authRouter);
+//app.use("/users", usersRouter);
 app.use("/blogs", blogsRouter);
 
 //require("./app/config/passport/passport.js")(passport, models.user);

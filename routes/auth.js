@@ -1,16 +1,10 @@
-var authController = require("../controllers/authcontroller.js");
+var express = require("express");
+var router = express.Router();
 
-module.exports = function (app, passport) {
-  app.get("/signup", authController.signup);
+const AuthController = require("../controllers/auth");
+const auth = require("../middlewares/authJWT");
 
-  app.get("/signin", authController.signin);
+router.post("/login", AuthController.login);
+router.post("/signup", AuthController.register);
 
-  app.post(
-    "/signup",
-    passport.authenticate("local-signup", {
-      successRedirect: "/dashboard",
-
-      failureRedirect: "/signup",
-    })
-  );
-};
+module.exports = router;
