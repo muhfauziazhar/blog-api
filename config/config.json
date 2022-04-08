@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "u7628624_muhfauziazhar",
+    "password": "password11zee",
+    "database": "u7628624_progate_db",
+    "host": "srv74.niagahoster.com",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "root",
+    "password": null,
+    "database": "database_test",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "u7628624_muhfauziazhar",
+    "password": "password11zee",
+    "database": "u7628624_progate_db",
+    "host": "srv74.niagahoster.com",
+    "dialect": "mysql"
+  }
+}
